@@ -13,3 +13,10 @@ All the events are volunteer-driven, and non-profit. Want to be part of our comm
 * [Varanasi WordPress Meetup](https://www.meetup.com/WordPress-Varanasi)
 
 You can also join our Slack group at [varanasifoss.slack.com](https://varanasifoss.slack.com).
+
+<h3>Contributors</h3>
+
+* Harsh Trivedi <a href="https://harsh98trivedi.github.io">(@harsh98trivedi)</a>
+* Abhishek Prakash <a href="https://twitter.com/abhishek_foss">(@abhishek_foss)</a>
+* Naveen Kharwar <a href="https://twitter.com/naveenkharwar">(@naveenkharwar)</a>
+* Akshat Gupta <a href="https://twitter.com/Akshatgupta11">(@Akshatgupta11)</a>
