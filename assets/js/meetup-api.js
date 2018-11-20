@@ -1,6 +1,6 @@
 const events = [];
 
-function formatDate( date ) {
+function formatDate(date) {
 	const monthNames = [
 		'January', 'February', 'March',
 		'April', 'May', 'June', 'July',
@@ -9,7 +9,7 @@ function formatDate( date ) {
 	];
 	const weekNames = [
 		'Sunday', 'Monday', 'Tuesday', 'Wednesday',
-		'Thursday' ,'Friday', 'Saturday',
+		'Thursday', 'Friday', 'Saturday',
 	];
 	const hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
 	const minutes = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();
@@ -22,26 +22,25 @@ function formatDate( date ) {
 	return time + ', ' + weekNames[dayofWeek] + ', ' + day + ', ' + monthNames[monthIndex];
 }
 
-function dateToISO( date ) {
-	return ( new Date( date ) ).toISOString().replace( /-|:|\.\d\d\d/g, '' );
+function dateToISO(date) {
+	return (new Date(date)).toISOString().replace(/-|:|\.\d\d\d/g, '');
 }
 
-function addToCalendar( event ) {
-	const duration = ( ( event.duration !== undefined ) ? event.duration : 7200000 );
+function addToCalendar(event) {
+	const duration = ((event.duration !== undefined) ? event.duration : 7200000);
 	const link = `http://www.google.com/calendar/event?action=TEMPLATE&text=${event.name}&details=More+Info:+${event.event_url}&dates=${dateToISO( event.time )}/${dateToISO( event.time + duration )}&location=${event.venue.name + ',+' + event.venue.address_1 + ',+' + event.venue.city}`;
 	return link;
 }
 
 $.ajax({
-	url: 'https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_id=28676809%2C15832012%2C15813572%2C15719982%2C23027469%2C25604122%2C26350537&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming&sig_id=132403932&sig=5653b4d042a5fca1e53a89953c785f6248c3c63d',
+	url: 'https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_urlname=Varanasi-WordPress-Meetup&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming&sig_id=224808546&sig=1745268623998b0e34156088fab42e5d0f14e2a3',
 	dataType: 'jsonp',
-	success: function(data) {
+	success: function (data) {
 		events.push(...data['results'])
-		const html = events.map( event => {
-			if ( event.group.urlname === 'VaranasiFOSS' ) {
-				group = 'foss';
-			}
-			else if ( event.group.urlname === 'VaranasiFOSS' ) {
+		const html = events.map(event => {
+			if (event.group.urlname === 'Varanasi-WordPress-Meetup') {
+				group = 'wordpress';
+			} else if (event.group.urlname === 'Varanasi-FOSS') {
 				group = 'foss';
 			}
 			return `<div class="card-media">
@@ -75,8 +74,8 @@ $.ajax({
 							</div>
 						</div>
 					</div>`
-		} ).join('');
-		const container = document.querySelector( '.container' );
+		}).join('');
+		const container = document.querySelector('.container');
 		container.innerHTML = html;
 	}
 });
