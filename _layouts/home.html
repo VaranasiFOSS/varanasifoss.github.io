@@ -4,27 +4,27 @@ layout: home
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
+{%- include head.html -%}
 
-  <body>
+<body>
 
-    {%- include header.html -%}
+  {%- include header.html -%}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <header class="post-header">
-          <h1 class="post-title">Upcoming Meetups</h1>
-        </header>
-        <div class="container">
-          <div class="loader">
-            <span class="bracket">{</span><span>Loading</span><span class="bracket">}</span>
-          </div>
-        </div>		  
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <header class="post-header">
+        <h1 class="post-title">Upcoming Meetups</h1>
+      </header>
+      <div class="container">
+        <div class="loader">
+          <span class="bracket">{</span><span>Loading</span><span class="bracket">}</span>
+        </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    {%- include footer.html -%}
+  {%- include footer.html -%}
 
-  </body>
+</body>
 
 </html>
