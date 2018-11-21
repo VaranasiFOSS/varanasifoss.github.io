@@ -11,6 +11,6 @@ If you want to email us then can do so at [varanasifoss@gmail.com](mailto:varana
 
 <center>
     <span style="padding: 0; margin: auto -15px; display: flex; max-width: 100%">
-        <embed style="min-width: 100%; display: flex; min-height: 30rem; height:100%; border-radius: 5rem; " src="http://varanasifoss.herokuapp.com/" />
+        <embed style="min-width: 100%; display: flex; min-height: 30rem; height:100%; border-radius: 5rem; " src="https://varanasifoss.herokuapp.com" />
     </span>
 </center>
