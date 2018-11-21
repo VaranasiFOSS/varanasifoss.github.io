@@ -10,7 +10,7 @@ VaranasiFOSS is sponsored by [itsFOSS.com](https://itsfoss.com) and this website
 
 All the events are volunteer-driven, and non-profit. Want to be part of our community? We currently host following meetups in Varanasi:
 
-* [Varanasi WordPress Meetup](https://www.meetup.com/WordPress-Varanasi)
+* [Varanasi WordPress Meetup](https://www.meetup.com/Varanasi-WordPress-Meetup/)
 
 You can also join our Slack group at [varanasifoss.slack.com](http://varanasifoss.herokuapp.com).
 
